@@ -1,0 +1,216 @@
+:root{
+    --primary-purple:  #0A092D;
+    --secondary-purple: #02192a;
+    /*--terti-purple: ;*/
+}
+
+body{
+    background-color: var(--primary-purple);
+    color: white;
+}
+
+
+/* Main Box/container */
+
+.main-box{
+    width: 90%;
+    margin: 2% 5%;
+    border: 1px solid #eda;
+    border-radius: 5px;
+}
+
+/* Navigation Bar */
+
+.nav-item{
+    margin: 0 10px;
+}
+
+.nav-link{
+    color: white;
+
+}
+
+.nav-link:hover{
+    color: #ccc;
+    /*var(--secondary-purple);*/
+}
+
+
+/* Icons */
+.fas{
+    margin-right: 10px;
+}
+/* Paenls */
+
+.left-panel{
+    font-size: 1rem;
+
+}
+
+.left-panel li{
+    list-style: none;
+}
+
+#controls{
+    display: inline-block;
+}
+
+
+.inline{
+    display: inline-block;
+}
+
+
+/* Text */
+p{
+    margin-bottom: 0;
+}
+.panel-text{
+    margin-bottom: 15px;
+    padding: 10px;
+
+}
+
+#set-title{
+    color: #eee;
+    margin: 2% 0 2% 5%;
+    text-align: center;
+
+}
+
+/* Right panel */
+
+.board{
+    min-width: 350px;
+    width: 100%;
+    height: 100%;
+    min-height: 350px;
+    background-color: black;
+    /*border: 5% solid red;*/
+    border-radius: 4%;
+    position: relative;
+}
+
+.board-content{
+    width: 80%;
+    height: 80%;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*Difficulty*/
+
+.difficulty {
+    width: 100%;
+    /*display: flex;*/
+    /*position: flex;*/
+}
+
+
+/**/
+.diff-item {
+    display: inline-block;
+    justify-content: space-between;
+
+}
+
+
+.square-10{
+
+    border: 1px solid red;
+    padding: 5px 10px;
+    margin: 20px 20px 10px;
+}
+
+.left-arrow, .right-arrow {
+    font-size: 3rem;
+}
+
+.confidence {
+    border: 1px solid #aaa;
+    /*margin: 10px;*/
+    padding: 20px;
+}
+
+.card-image{
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+    margin-top: 20%;
+}
+
+.outer-control{
+    text-align: center;
+}
+
+.inner-control{
+    display: inline-block;
+    margin: 0 auto;
+}
+
+ul{
+    padding: 0;
+}
+
+
+/*Board animation*/
+
+.board {
+    background-color: #aaa;
+    color: black;
+    width: 100%;
+    height: auto;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    position: relative;
+}
+
+/* This container is needed to position the front and back side */
+.board-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    /*top: 50%;*/
+    /*margin-top: -25%;*/
+    /*-webkit-transition: all 1.8s ease;*/
+    transition: linear 2.8s ease;
+    transform-style: preserve-3d;
+    overflow: hidden;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.board:hover .question {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.board:hover .answer {
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+
+
+/* Position the front and back side */
+.question, .answer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+
+/* Style the back side */
+.answer {
+  /*background-color: dodgerblue;*/
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
